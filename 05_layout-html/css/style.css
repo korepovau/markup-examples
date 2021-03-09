@@ -1,3 +1,32 @@
+@font-face {
+  font-family: "MullerBold";
+  src: url("/05_layout-html/fonts/MullerBold.woff2") format("woff2"),
+    url("/05_layout-html/fonts/MullerBold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "MullerLight";
+  src: url("/05_layout-html/fonts/MullerBold.woff2") format("woff2"),
+    url("/05_layout-html/fonts/MullerBold.woff") format("woff");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "MullerMedium";
+  src: url("..//fonts/MullerMedium.woff2") format("woff2"),
+    url("/05_layout-html/fonts/MullerMedium.woff") format("woff");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "MullerRegular";
+  src: url("/05_layout-html/fonts/MullerRegular.woff2") format("woff2"),
+    url("/05_layout-html/fonts/MullerRegular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
 * {
   box-sizing: border-box;
 
@@ -5,6 +34,7 @@
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
 ul {
   margin: 0;
@@ -48,7 +78,7 @@ html {
 }
 .phone {
   margin-right: 550px;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
   font-weight: bold;
   font-size: 22px;
   font-family: "MullerBold";
@@ -58,12 +88,13 @@ html {
 .personal-area {
   margin-right: 14px;
   margin-bottom: 50px;
+  font-family: "Muller Regular";
+  line-height: 1;
   background: url(/05_layout-html/img/return.png);
   background-size: 19px;
   padding-left: 30px;
   background-repeat: no-repeat;
   background-position: left;
-  font-family: "Muller Regular";
   color: #cc9933;
 }
 .nav {
@@ -71,22 +102,24 @@ html {
   margin-right: auto;
   margin-left: auto;
   padding-left: 20px;
+  padding-right: 20px;
   border-radius: 12px;
   height: 70px;
   background-color: #ffffff;
 }
 .nav-list {
+  justify-content: space-around;
   text-align: center;
   background-color: #ffffff;
   display: flex;
 }
-.nav-item:not(:last-child) {
+.nav-item {
   margin-top: 25px;
-  margin-right: 45px;
   background-color: #ffffff;
   font-size: 16px;
   font-family: "MullerRegular";
 }
+
 .nav-item-input {
   background-color: #ffffff;
 }
@@ -109,17 +142,17 @@ html {
   border: none;
 }
 input[type="search"]::-webkit-input-placeholder {
-  color: #f6f6f6;
   font-family: "MullerRegular";
+  color: #f6f6f6;
 }
 
 .src-button {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   right: 10px;
   width: 30px;
   height: 30px;
+  transform: translateY(-50%);
   background-image: url(/05_layout-html/img/search.png);
   background-size: 70%;
   background-repeat: no-repeat;
@@ -128,15 +161,81 @@ input[type="search"]::-webkit-input-placeholder {
   background-color: transparent;
   cursor: pointer;
 }
+
+.white-container {
+  position: relative;
+  width: 600px;
+  height: 550px;
+  text-align: left;
+  background-image: url(/05_layout-html/img/example.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.white {
+  position: absolute;
+  top: 257px;
+  left: 7%;
+  font-family: "MullerBold";
+  font-size: 66px;
+  line-height: 58px;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.five {
+  position: absolute;
+  top: 86%;
+  left: 7%;
+  font-family: "MullerRegular";
+  font-size: 35px;
+  color: rgba(255, 255, 255, 0.49);
+  background-color: transparent;
+}
+.more {
+  position: absolute;
+  left: 43%;
+  top: 88%;
+  background-image: url(/05_layout-html/img/arrow2.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-right: 15px;
+  font-family: "MulletRegular", sans-serif;
+  font-size: 16px;
+  color: #ffcc66;
+  background-color: transparent;
+}
 /* Hotel room */
 
 .hotel-room-container {
   display: flex;
   padding-top: 70px;
 }
+.h2 {
+  padding-left: 45px;
+  padding-bottom: 30px;
+  margin: auto;
+  font-size: 40px;
+  line-height: 1;
+  font-family: "MullerRegular";
+  color: #333333;
+}
 .fast-book {
   flex-direction: column;
   margin-right: 58px;
+}
+.reservation input {
+  background-color: #ffffff;
+  border-color: transparent;
+  border-radius: 12px;
+}
+input[type="text"]::-webkit-input-placeholder {
+  font-family: "MullerRegular";
+  color: #f6f6f6;
+}
+input[type="number"]::-webkit-input-placeholder {
+  font-family: "MullerRegular", sans-serif;
+  color: #f6f6f6;
 }
 input {
   width: 514px;
@@ -160,20 +259,54 @@ input:last-child {
 }
 .src-room {
   padding: 28px;
+  font-family: "MullerBold";
+  font-size: 16px;
+  line-height: 1;
+  color: #ffffff;
+  background-color: #cc9933;
+  border-color: transparent;
+  border-radius: 12px;
 }
 .btn-txt {
+  position: absolute;
+  margin-top: 22px;
   max-width: 226px;
   display: inline-block;
 }
-
-/* about us */
-
-.h2 {
-  padding-left: 45px;
-  padding-bottom: 30px;
-  margin: auto;
+.gold {
+  font-family: "MullerRegular", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  color: #d3ab59;
 }
+.grey {
+  font-family: "MullerRegular", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  color: #999999;
+}
+/* about us */
+.about-us-container {
+  padding-left: 40px;
+}
+.h2-about-us {
+  padding-left: 0;
+  padding-bottom: 20px;
+}
+.about-us-description {
+  font-family: "MullerRegular", sans-serif;
+  font-size: 16px;
+  line-height: 32px;
+  color: #666666;
+}
+
 /* services */
+.services-container {
+  padding-bottom: 55px;
+}
+.h2-services {
+  padding-left: 40px;
+}
 .parent {
   display: flex;
   flex-wrap: wrap;
@@ -181,27 +314,194 @@ input:last-child {
 }
 .child {
   width: 570px;
+  height: 327px;
+  margin-bottom: 23px;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+.child-11 {
+  background-image: url(/05_layout-html/img/services/bokal.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.child-22 {
+  background-image: url(/05_layout-html/img/services/zal.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.child-33 {
+  background-image: url(/05_layout-html/img/services/pool.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.child-44 {
+  background-image: url(/05_layout-html/img/services/car.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.h3 {
+  margin: 0;
+  padding-top: 200px;
+  padding-bottom: 18px;
+  padding-left: 50px;
+  font-family: "MullerMedium";
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1;
+  color: #cc9933;
+  background-color: transparent;
+}
+.services-description {
+  margin: 0;
+  padding-left: 50px;
+  font-family: "MullerRegular";
+  font-size: 16px;
+  line-height: 32px;
+  color: #333333;
+  background-color: transparent;
 }
 
 /* advantages */
+
 .parent-acc {
   display: flex;
   flex-wrap: wrap;
 }
+
 .adv-child {
   width: 270px;
-  padding-bottom: 23px;
+  height: 278px;
+  margin-bottom: 20px;
+  padding-top: 125px;
+  padding-left: 44px;
+  padding-right: 40px;
+  font-family: "MullerRegular";
+  font-size: 16px;
+  line-height: 32px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  word-wrap: break-word;
 }
-.adv-child-1 {
-  width: 270px;
+.child-1 {
+  background-image: url(/05_layout-html/img/преимущества/bathtub.png);
+  background-repeat: no-repeat;
+  background-size: 70px;
+  background-position: 44px 40px;
+}
+.child-2 {
+  background-image: url(/05_layout-html/img/преимущества/hanger.png);
+  background-repeat: no-repeat;
+  background-size: 70px;
+  background-position: 44px 40px;
+}
+.child-3 {
+  background-image: url(/05_layout-html/img/преимущества/heating.png);
+  background-repeat: no-repeat;
+  background-size: 70px;
+  background-position: 44px 40px;
+}
+.child-4 {
+  background-image: url(/05_layout-html/img/преимущества/hotel-key.png);
+  background-repeat: no-repeat;
+  background-size: 70px;
+  background-position: 44px 40px;
+}
+.child-5 {
+  background-image: url(/05_layout-html/img/преимущества/parking.png);
+  background-repeat: no-repeat;
+  background-size: 70px;
+  background-position: 44px 40px;
+}
+.child-6 {
+  background-image: url(/05_layout-html/img/преимущества/reception.png);
+  background-repeat: no-repeat;
+  background-size: 70px;
+  background-position: 44px 40px;
+}
+.child-7 {
+  background-image: url(/05_layout-html/img/преимущества/security-box.png);
+  background-repeat: no-repeat;
+  background-size: 70px;
+  background-position: 44px 40px;
+}
+.child-8 {
+  background-image: url(/05_layout-html/img/преимущества/bathtub.png);
+  background-repeat: no-repeat;
+  background-size: 70px;
+  background-position: 44px 40px;
+}
+.child-1 {
+  background-image: url(/05_layout-html/img/преимущества/swimming-pool.png);
+  background-repeat: no-repeat;
+  background-size: 70px;
+  background-position: 44px 40px;
 }
 /* accommodation */
 .acc-child {
-  width: 372px;
+  width: 373px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  margin-bottom: 18px;
 }
 .acc-child:nth-last-of-type(n + 4) {
   padding-bottom: 25px;
 }
 .acc-child:not(:nth-child(3n)) {
   margin-right: 23px;
+}
+.acc-description {
+  background-color: transparent;
+  padding-top: 20px;
+  padding-left: 42px;
+}
+.grey {
+  padding-right: 6px;
+  background-color: transparent;
+  line-height: 32px;
+}
+.strong {
+  background-color: transparent;
+  line-height: 32px;
+}
+.star {
+  display: inline-block;
+  padding-left: 40px;
+  background-color: transparent;
+}
+.star img {
+  background-color: transparent;
+}
+.room {
+  margin-top: 25px;
+  margin-bottom: 43px;
+  padding: 14px 20px;
+  font-family: "MullerBold";
+  color: #dab469;
+  border: solid #dab469;
+  border-radius: 12px;
+  background-color: transparent;
+  border-width: 2px;
+}
+.see-options {
+  background-image: url(/05_layout-html/img/41.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.a-container {
+  position: relative;
+  width: 100%;
+  text-align: left;
+}
+.a {
+  position: absolute;
+  top: 380px;
+  left: 40px;
+  padding-right: 20px;
+  font-family: "MullerMedium";
+  font-size: 22px;
+  color: #ffffff;
+  background-image: url(/05_layout-html/img/arrow3.png);
+  background-repeat: no-repeat;
+  background-position: right;
 }
