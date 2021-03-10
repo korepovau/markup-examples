@@ -176,7 +176,7 @@ input[type="search"]::-webkit-input-placeholder {
   position: absolute;
   top: 257px;
   left: 7%;
-  font-family: "MullerBold";
+  font-family: "MullerBold", sans-serif;
   font-size: 66px;
   line-height: 58px;
   color: #ffffff;
@@ -217,7 +217,7 @@ input[type="search"]::-webkit-input-placeholder {
   margin: auto;
   font-size: 40px;
   line-height: 1;
-  font-family: "MullerRegular";
+  font-family: "MullerRegular", sans-serif;
   color: #333333;
 }
 .fast-book {
