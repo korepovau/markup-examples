@@ -28,7 +28,12 @@
               <a href="" class="nav-link">Контакты</a>
             </li>
             <li class="nav-item-input">
-              <form class="src">
+              <form
+                class="src"
+                action="https://jsonplaceholder.typicode.com/posts"
+                autocomplete="on"
+                method="POST"
+              >
                 <input type="search" placeholder="Поиск" /><button
                   class="src-button"
                 ></button>
@@ -44,14 +49,27 @@
           <div class="fast-book">
             <h2 class="h2">Быстрая бронь</h2>
             <form class="reservation">
-              <input type="text" placeholder="Город" />
-              <input type="text" placeholder="Категория номера" />
-              <input type="text" placeholder="Дата заселения" />
-              <input type="number" placeholder="Количество ночей" />
-              <input type="number" placeholder="Количество гостей" />
+              <input name="city" type="text" placeholder="Город" />
+              <input
+                name="kind og room"
+                type="text"
+                placeholder="Категория номера"
+              />
+              <input name="date" type="text" placeholder="Дата заселения" />
+              <input
+                name="number of nights"
+                type="number"
+                placeholder="Количество ночей"
+              />
+              <input
+                name="number of guests"
+                required
+                type="number"
+                placeholder="Количество гостей"
+              />
             </form>
             <div class="divbtn">
-              <button class="src-room">Найти номер</button>
+              <button type="submit" class="src-room">Найти номер</button>
             </div>
             <p class="btn-txt">
               <span class="gold"><a href="" class="link">9 756</a></span>
@@ -378,7 +396,7 @@
               <button class="btn-way">Построить маршрут</button>
             </div>
             <div class="form question-form">
-              <legend class="h2 legend-h2">Остались вопросы?</legend>
+              <h2 class="h2 legend-h2">Остались вопросы?</h2>
               <form
                 action="https://jsonplaceholder.typicode.com/posts"
                 autocomplete="on"
@@ -405,7 +423,7 @@
                   ><a>Политикой конфеденциальности</a></strong
                 >
               </p>
-              <button class="src-room send">Отправить</button>
+              <button type="submit" class="src-room send">Отправить</button>
             </div>
           </fieldset>
         </div>
@@ -421,7 +439,7 @@
               и не является публичной офертой
             </p>
             <p class="p-footer">
-              <a class="footer-gold">Пользовательское соглашение</a>
+              <a href="" class="footer-gold">Пользовательское соглашение</a>
             </p>
           </div>
           <div class="div div-footer div-footer-2">
@@ -443,11 +461,15 @@
           </div>
           <div class="div div-footer-ul">
             <ul class="footer-ul">
-              <li class="footer-li tripadviser"></li>
-              <li class="footer-li twitter"></li>
-              <li class="footer-li facebook"></li>
-              <li class="footer-li vk"></li>
-              <li class="footer-li google"></li>
+              <li class="footer-li tripadviser">
+                <a href="" class=""></a>
+              </li>
+              <li class="footer-li twitter"><a href="" class=""></a></li>
+              <li class="footer-li facebook"><a href="" class=""></a></li>
+              <li class="footer-li vk">
+                <a href="" class=""></a>
+              </li>
+              <li class="footer-li google"><a href="" class=""></a></li>
             </ul>
           </div>
         </div>

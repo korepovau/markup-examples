@@ -723,3 +723,8 @@ input:last-child {
 .google {
   background-image: url(../img/foot/google-plus-social-logotype.png);
 }
+.footer-li a {
+  display: block;
+  height: 24px;
+  width: 24px;
+}
