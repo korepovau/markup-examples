@@ -1,29 +1,29 @@
 @font-face {
   font-family: "MullerBold";
-  src: url("../05_layout-html/fonts/MullerBold.woff2") format("woff2"),
-    url("../05_layout-html/fonts/MullerBold.woff") format("woff");
+  src: url("../fonts/MullerBold.woff2") format("woff2"),
+    url("..fonts/MullerBold.woff") format("woff");
   font-style: normal;
   font-weight: 700;
 }
 
 @font-face {
   font-family: "MullerLight";
-  src: url("../05_layout-html/fonts/MullerBold.woff2") format("woff2"),
-    url("../05_layout-html/fonts/MullerBold.woff") format("woff");
+  src: url("../fonts/MullerLight.woff2") format("woff2"),
+    url("../fonts/MullerLight.woff") format("woff");
   font-style: normal;
   font-weight: 300;
 }
 @font-face {
   font-family: "MullerMedium";
   src: url("../fonts/MullerMedium.woff2") format("woff2"),
-    url("../05_layout-html/fonts/MullerMedium.woff") format("woff");
+    url("../fonts/MullerMedium.woff") format("woff");
   font-style: normal;
   font-weight: 500;
 }
 @font-face {
   font-family: "MullerRegular";
-  src: url("../05_layout-html/fonts/MullerRegular.woff2") format("woff2"),
-    url("../05_layout-html/fonts/MullerRegular.woff") format("woff");
+  src: url("../fonts/MullerRegular.woff2") format("woff2"),
+    url("../fonts/MullerRegular.woff") format("woff");
   font-style: normal;
   font-weight: 400;
 }
@@ -117,7 +117,7 @@ html {
   margin-top: 25px;
   background-color: #ffffff;
   font-size: 16px;
-  font-family: "MullerRegular";
+  font-family: "MullerRegular", sans-serif;
 }
 
 .nav-item-input {
@@ -187,7 +187,7 @@ input[type="search"]::-webkit-input-placeholder {
   position: absolute;
   top: 86%;
   left: 7%;
-  font-family: "MullerRegular";
+  font-family: "MullerRegular", sans-serif;
   font-size: 35px;
   color: rgba(255, 255, 255, 0.49);
   background-color: transparent;
@@ -230,7 +230,7 @@ input[type="search"]::-webkit-input-placeholder {
   border-radius: 12px;
 }
 input[type="text"]::-webkit-input-placeholder {
-  font-family: "MullerRegular";
+  font-family: "MullerRegular", sans-serif;
   color: #f6f6f6;
 }
 input[type="number"]::-webkit-input-placeholder {
@@ -355,7 +355,7 @@ input:last-child {
 .services-description {
   margin: 0;
   padding-left: 50px;
-  font-family: "MullerRegular";
+  font-family: "MullerRegular", sans-serif;
   font-size: 16px;
   line-height: 32px;
   color: #333333;
@@ -376,7 +376,7 @@ input:last-child {
   padding-top: 125px;
   padding-left: 44px;
   padding-right: 40px;
-  font-family: "MullerRegular";
+  font-family: "MullerRegular", sans-serif;
   font-size: 16px;
   line-height: 32px;
   border-radius: 12px;
@@ -504,4 +504,221 @@ input:last-child {
   background-image: url(../img/arrow3.png);
   background-repeat: no-repeat;
   background-position: right;
+}
+/* Contacts */
+.fieldset,
+.background,
+.ul-container,
+.p-contacts,
+.li-contacts,
+.h3-contacts,
+.e-gold,
+.btn-way,
+.question-form,
+.legend-h2,
+.form-question,
+.gold-politic {
+  background-color: #ffffff;
+}
+.contacts-container {
+  padding-bottom: 20px;
+}
+.fieldset {
+  display: flex;
+  padding-bottom: 45px;
+  border: none;
+  border-radius: 12px;
+}
+
+.ul-container {
+  margin-left: 40px;
+}
+.ul-contacts {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  width: 386px;
+}
+.p-contacts {
+  display: block;
+  margin: 0;
+  width: 227px;
+  font-family: "MullerRegular", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+}
+
+.li-contacts {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  padding-bottom: 30px;
+  padding-top: 20px;
+  border-bottom: 1px solid #cccccc;
+}
+.h3-contacts {
+  flex: 0 0 145px;
+  margin: 0;
+  font-family: "MullerBold";
+  font-size: 22px;
+  line-height: 32px;
+  color: #666666;
+}
+
+.p-contacts-phone {
+  width: 156px;
+  color: #cc9933;
+}
+
+.e-gold {
+  color: #cc9933;
+}
+.li-grafik {
+  border: none;
+  padding-bottom: 0;
+}
+.btn-way {
+  margin-top: 82px;
+  margin-left: 40px;
+  margin-bottom: 47px;
+  padding: 30px;
+  font-family: "MullerBold";
+  font-size: 16px;
+  color: #cc9933;
+  line-height: 1;
+  border: solid 1px #cc9933;
+  border-radius: 12px;
+}
+.question-form {
+  margin-left: 65px;
+}
+
+.form-question {
+  display: flex;
+  flex-wrap: wrap;
+}
+.input {
+  border: none;
+  border-radius: 12px;
+  background-color: #f1f1f1;
+}
+.input[type="text"]::-webkit-input-placeholder {
+  font-family: "MullerRegular";
+  color: #999999;
+}
+#name {
+  width: 300px;
+  margin-right: 23px;
+}
+#phone {
+  width: 300px;
+}
+#messege {
+  width: 630px;
+  height: 220px;
+  padding-top: 20px;
+  padding-bottom: 190px;
+}
+.legend-h2 {
+  padding: 0;
+  margin-left: 0px;
+  margin-top: 47px;
+  margin-bottom: 30px;
+}
+.grey-send {
+  margin: 0;
+  margin-bottom: 45px;
+}
+.send {
+  padding: 31px 126px;
+}
+/* footer */
+.footer-container,
+.footer-container {
+  background-color: #333333;
+}
+.div-footer,
+.div-footer > *,
+.div-footer-ul,
+.div-footer-ul > *,
+.footer-li {
+  background-color: transparent;
+}
+.footer-container {
+  border-radius: 12px;
+  width: 1168px;
+  background-image: url(../img/foot/sun2.png);
+  background-repeat: no-repeat;
+  background-position: right 185px bottom;
+}
+
+.footer-container {
+  display: flex;
+  padding-left: 50px;
+  margin-bottom: 50px;
+  padding-bottom: 0;
+}
+.div-footer {
+  margin: 0;
+  max-width: 298px;
+  margin-right: 130px;
+}
+.footer-contacts {
+  margin-right: 260px;
+}
+.p-footer {
+  margin: 0;
+  font-family: "MullerRegular";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 32px;
+  color: #ffffff;
+  padding-bottom: 50px;
+}
+.footer-info,
+.footer-contacts,
+.address {
+  padding-top: 47px;
+}
+.div-footer-2 {
+  max-width: 360px;
+  margin-right: 265px;
+}
+.address {
+  padding-bottom: 40px;
+}
+.footer-phones {
+  padding-bottom: 35px;
+}
+
+.footer-phones,
+.footer-email,
+.footer-gold {
+  color: #cc9933;
+}
+
+.footer-ul {
+  margin-top: 50px;
+}
+.footer-li {
+  margin-bottom: 20px;
+  width: 25px;
+  height: 25px;
+  background: no-repeat contain;
+}
+.tripadviser {
+  background-image: url(../img/foot/tripadvisor.png);
+}
+.twitter {
+  background-image: url(../img/foot/twitter.png);
+}
+.facebook {
+  background-image: url(../img/foot/facebook.png);
+}
+.vk {
+  background-image: url(../img/foot/social.png);
+}
+.google {
+  background-image: url(../img/foot/google-plus-social-logotype.png);
 }
