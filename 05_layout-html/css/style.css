@@ -703,9 +703,10 @@ input:last-child {
 }
 .footer-li {
   margin-bottom: 20px;
-  width: 25px;
-  height: 25px;
-  background: no-repeat contain;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .tripadviser {
   background-image: url(../img/foot/tripadvisor.png);
