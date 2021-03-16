@@ -525,7 +525,6 @@ input:last-child {
 }
 .fieldset {
   display: flex;
-  padding-bottom: 45px;
   border: none;
   border-radius: 12px;
 }
