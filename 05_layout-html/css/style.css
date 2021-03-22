@@ -35,7 +35,12 @@
 a {
   text-decoration: none;
   color: inherit;
+  transition: color 0.3s linear;
 }
+a:hover {
+  color: var(--main-a-color);
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -55,7 +60,17 @@ html {
   padding-bottom: 70px;
   max-width: 1198px;
 }
-
+.button {
+  cursor: pointer;
+}
+.button:hover {
+  transform: translateY(2px);
+}
+:root {
+  --main-bg-color: #ffffff;
+  --main-gold-color: #cc9933;
+  --main-a-color: #cee8fa;
+}
 /* Header*/
 
 .header {
@@ -72,10 +87,12 @@ html {
 .logo {
   margin-right: auto;
   margin-bottom: 30px;
+  transition: opacity 0.3s linear;
 }
-.logo-img {
-  width: 260px;
+.logo :hover {
+  opacity: 85%;
 }
+
 .phone {
   margin-right: 550px;
   margin-bottom: 35px;
@@ -83,6 +100,17 @@ html {
   font-size: 22px;
   font-family: "MullerBold";
   color: rgb(102, 102, 102);
+  transition: stroke 0.3s linear;
+}
+.phone:hover {
+  color: #75bbec;
+}
+
+.personal-area svg path {
+  transform: translateY(9px);
+}
+.personal-area svg {
+  height: 29px;
 }
 
 .personal-area {
@@ -90,12 +118,21 @@ html {
   margin-bottom: 50px;
   font-family: "Muller Regular";
   line-height: 1;
-  background: url(../img/return.png);
-  background-size: 19px;
-  padding-left: 30px;
-  background-repeat: no-repeat;
-  background-position: left;
-  color: #cc9933;
+  color: var(--main-gold-color);
+}
+.personal-area {
+  background-color: transparent;
+  transition: stroke 0.3s linear;
+}
+.personal-area:hover {
+  color: #75bbec;
+}
+.personal-area:hover svg path {
+  fill: #75bbec;
+}
+.nav,
+nav > * {
+  background-color: var(--main-bg-color);
 }
 .nav {
   width: 1168px;
@@ -105,23 +142,21 @@ html {
   padding-right: 20px;
   border-radius: 12px;
   height: 70px;
-  background-color: #ffffff;
 }
 .nav-list {
   justify-content: space-around;
   text-align: center;
-  background-color: #ffffff;
   display: flex;
 }
 .nav-item {
   margin-top: 25px;
-  background-color: #ffffff;
+  background-color: var(--main-bg-color);
   font-size: 16px;
   font-family: "MullerRegular", sans-serif;
 }
 
 .nav-item-input {
-  background-color: #ffffff;
+  background-color: var(--main-bg-color);
 }
 .src {
   margin-left: 125px;
@@ -129,7 +164,7 @@ html {
   position: relative;
   width: 347px;
   height: 45px;
-  background-color: #f1f1f1;
+  background-color: var(--main-bg-color);
   border-radius: 15px;
 }
 
@@ -137,7 +172,7 @@ html {
   width: 100%;
   height: 100%;
   padding-left: 20px;
-  background-color: #ffffff;
+  background-color: var(--main-bg-color);
   border-radius: 15px;
   border: none;
 }
@@ -179,7 +214,7 @@ input[type="search"]::-webkit-input-placeholder {
   font-family: "MullerBold", sans-serif;
   font-size: 66px;
   line-height: 58px;
-  color: #ffffff;
+  color: var(--main-bg-color);
   background-color: transparent;
 }
 
@@ -196,15 +231,21 @@ input[type="search"]::-webkit-input-placeholder {
   position: absolute;
   left: 43%;
   top: 88%;
-  background-image: url(../img/arrow2.svg);
-  background-repeat: no-repeat;
-  background-position: right;
-  padding-right: 15px;
   font-family: "MulletRegular", sans-serif;
   font-size: 16px;
   color: #ffcc66;
   background-color: transparent;
+  transition: fill 0.3s linear;
 }
+.more svg {
+  background-color: transparent;
+  transition: stroke 0.3s linear;
+  transform: translateY(6px);
+}
+a:hover svg path {
+  stroke: var(--main-a-color);
+}
+
 /* Hotel room */
 
 .hotel-room-container {
@@ -225,7 +266,7 @@ input[type="search"]::-webkit-input-placeholder {
   margin-right: 58px;
 }
 .reservation input {
-  background-color: #ffffff;
+  background-color: var(--main-bg-color);
   border-color: transparent;
   border-radius: 12px;
 }
@@ -262,8 +303,8 @@ input:last-child {
   font-family: "MullerBold";
   font-size: 16px;
   line-height: 1;
-  color: #ffffff;
-  background-color: #cc9933;
+  color: var(--main-bg-color);
+  background-color: var(--main-gold-color);
   border-color: transparent;
   border-radius: 12px;
 }
@@ -317,7 +358,7 @@ input:last-child {
   height: 327px;
   margin-bottom: 23px;
   border-radius: 12px;
-  background-color: #ffffff;
+  background-color: var(--main-bg-color);
 }
 
 .child-11 {
@@ -349,7 +390,7 @@ input:last-child {
   font-size: 22px;
   font-weight: 400;
   line-height: 1;
-  color: #cc9933;
+  color: var(--main-gold-color);
   background-color: transparent;
 }
 .services-description {
@@ -364,7 +405,7 @@ input:last-child {
 
 /* advantages */
 
-.parent-acc {
+.parent-adv {
   display: flex;
   flex-wrap: wrap;
 }
@@ -373,6 +414,7 @@ input:last-child {
   width: 270px;
   height: 278px;
   margin-bottom: 20px;
+
   padding-top: 125px;
   padding-left: 44px;
   padding-right: 40px;
@@ -380,9 +422,10 @@ input:last-child {
   font-size: 16px;
   line-height: 32px;
   border-radius: 12px;
-  background-color: #ffffff;
+  background-color: var(--main-bg-color);
   word-wrap: break-word;
 }
+
 .child-1 {
   background-image: url(../img/преимущества/bathtub.png);
   background-repeat: no-repeat;
@@ -395,12 +438,16 @@ input:last-child {
   background-size: 70px;
   background-position: 44px 40px;
 }
+.adv-child:not(:nth-child(4n)) {
+  margin-right: 23px;
+}
 .child-3 {
   background-image: url(../img/преимущества/heating.png);
   background-repeat: no-repeat;
   background-size: 70px;
   background-position: 44px 40px;
 }
+
 .child-4 {
   background-image: url(../img/преимущества/hotel-key.png);
   background-repeat: no-repeat;
@@ -426,22 +473,21 @@ input:last-child {
   background-position: 44px 40px;
 }
 .child-8 {
-  background-image: url(../img/преимущества/bathtub.png);
-  background-repeat: no-repeat;
-  background-size: 70px;
-  background-position: 44px 40px;
-}
-.child-1 {
   background-image: url(../img/преимущества/swimming-pool.png);
   background-repeat: no-repeat;
   background-size: 70px;
   background-position: 44px 40px;
 }
+
 /* accommodation */
+.parent-acc {
+  display: flex;
+  flex-wrap: wrap;
+}
 .acc-child {
   width: 373px;
   border-radius: 12px;
-  background-color: #ffffff;
+  background-color: var(--main-bg-color);
   margin-bottom: 18px;
 }
 .acc-child:nth-last-of-type(n + 4) {
@@ -483,27 +529,41 @@ input:last-child {
   background-color: transparent;
   border-width: 2px;
 }
-.see-options {
-  background-image: url(../img/41.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 .a-container {
+  padding-top: 368px;
+  padding-left: 40px;
+  width: 374px;
+  height: 475px;
   position: relative;
   width: 100%;
   text-align: left;
+  background-image: url(../img/41.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 12px;
 }
 .a {
-  position: absolute;
-  top: 380px;
-  left: 40px;
-  padding-right: 20px;
   font-family: "MullerMedium";
   font-size: 22px;
-  color: #ffffff;
-  background-image: url(../img/arrow3.png);
-  background-repeat: no-repeat;
-  background-position: right;
+  color: var(--main-bg-color);
+  height: 100%;
+}
+.a-container .a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.a svg {
+  background-color: transparent;
+  transform: translateY(2px);
+}
+.a:hover svg path {
+  stroke: var(--main-a-color);
 }
 /* Contacts */
 .fieldset,
@@ -518,7 +578,7 @@ input:last-child {
 .legend-h2,
 .form-question,
 .gold-politic {
-  background-color: #ffffff;
+  background-color: var(--main-bg-color);
 }
 .contacts-container {
   padding-bottom: 20px;
@@ -567,11 +627,11 @@ input:last-child {
 
 .p-contacts-phone {
   width: 156px;
-  color: #cc9933;
+  color: var(--main-gold-color);
 }
 
 .e-gold {
-  color: #cc9933;
+  color: var(--main-gold-color);
 }
 .li-grafik {
   border: none;
@@ -584,9 +644,9 @@ input:last-child {
   padding: 30px;
   font-family: "MullerBold";
   font-size: 16px;
-  color: #cc9933;
+  color: var(--main-gold-color);
   line-height: 1;
-  border: solid 1px #cc9933;
+  border: solid 1px var(--main-gold-color);
   border-radius: 12px;
 }
 .question-form {
@@ -671,7 +731,7 @@ input:last-child {
   font-style: normal;
   font-size: 16px;
   line-height: 32px;
-  color: #ffffff;
+  color: var(--main-bg-color);
   padding-bottom: 50px;
 }
 .footer-info,
@@ -693,7 +753,7 @@ input:last-child {
 .footer-phones,
 .footer-email,
 .footer-gold {
-  color: #cc9933;
+  color: var(--main-gold-color);
 }
 
 .footer-ul {
@@ -725,4 +785,9 @@ input:last-child {
   display: block;
   height: 24px;
   width: 24px;
+  border-radius: 12px;
+  transition: background-color 0.3s linear;
+}
+.footer-li a:hover {
+  background-color: rgba(81%, 91%, 98%, 0.3);
 }
