@@ -615,16 +615,23 @@ li {
 input[type="checkbox"] + .footer__span {
   position: absolute;
   left: 0;
-  top: 0;
+  top: -1px;
   width: 107%;
   height: 100%;
   background: url(../img/merge_from_ofoct.jpg) no-repeat;
   cursor: pointer;
-  background-position: 0 2px;
+  background-position: 0 3px;
 }
 
 input[type="checkbox"]:checked + .footer__span {
   background-position: 0 -14px;
+  top: 2px;
+}
+.footer-hidden-checkbox {
+  /* top: 2px;
+  position: relative;
+  border: none; */
+  visibility: hidden;
 }
 .footer__div4 {
   margin-top: 126px;
